@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 28px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header img {
+  height: 36px;
+  margin-right: 10px;
+}
+
+td img {
+  height: 35px;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 100px auto;
+}
+
+form button {
+  background-color: green;
+  color: white;
+  size: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+th {
+  padding-right: 100px;
+  padding-top: 15px;
+}
