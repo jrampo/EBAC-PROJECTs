@@ -1,7 +1,7 @@
 const form = document.getElementById("form-atividade");
 
-const imgAprov = "";
-const imgReprov = "";
+const imgAprov = "<img src='./assets/joia.webp' alt='teste'/>";
+const imgReprov = "<img src='./assets/pa.png' alt='teste'/>";
 
 let linhas = " ";
 
@@ -14,7 +14,7 @@ form.addEventListener("submit", function (e) {
   let linha = "<tr>";
   linha += `<td>${inputName.value}</td>`;
   linha += `<td>${inputNota.value}</td>`;
-  linha += `<td>${inputNota.value >= 7 ? "Aprovado" : "Reprovado"}</td>`;
+  linha += `<td>${inputNota.value >= 7 ? imgAprov : imgReprov}</td>`;
   linha += `</tr>`;
 
   linhas += linha;
@@ -22,8 +22,6 @@ form.addEventListener("submit", function (e) {
   const corpoTabela = document.querySelector("tbody");
   corpoTabela.innerHTML = linhas;
 
-  alert(`Atividade: ${inputName.value} - Nota: ${inputNota.value}`);
-
-  inputName.value = "";
   inputNota.value = "";
+  inputName.value = "";
 });
