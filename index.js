@@ -20,4 +20,7 @@ form.addEventListener("submit", function (e) {
   corpoTabela.innerHTML = linhas;
 
   alert(`Atividade: ${inputName.value} - Nota: ${inputNota.value}`);
+
+  inputName.value = "";
+  inputNota.value = "";
 });
