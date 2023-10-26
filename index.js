@@ -1,5 +1,8 @@
 const form = document.getElementById("form-atividade");
 
+const imgAprov = "";
+const imgReprov = "";
+
 let linhas = " ";
 
 form.addEventListener("submit", function (e) {
