@@ -46,7 +46,7 @@ function attTable() {
 function attMediaFinal() {
   const mediaFinal = calcMedia();
 
-  document.getElementById("notaMedia").innerHTML = mediaFinal;
+  document.getElementById("notaMedia").innerHTML = mediaFinal.toFixed(1);
   document.getElementById("feedback-result").innerHTML =
     mediaFinal >= 7 ? spanAprov : spanReprov;
 }
