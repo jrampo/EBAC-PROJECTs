@@ -32,10 +32,11 @@ td img {
 
 tbody td {
   padding: 5px 0;
+  border-bottom: 2px solid black;
 }
 
 tfoot td {
-  padding-top: 25px;
+  padding-top: 20px;
 }
 
 .container {
@@ -65,13 +66,23 @@ th {
   border-bottom: 2px solid black;
 }
 
-.feedback-result {
-  background-color: green;
+#feedback-result {
+}
+
+tfoot tr #feedback-result {
+  margin-top: 20px;
+}
+
+span {
   display: inline-flex;
   padding: 5px 9px;
   color: white;
 }
 
-tfoot tr .feedback-result {
-  margin-top: 25px;
+.reprovado {
+  background-color: red;
+}
+
+.aprovado {
+  background-color: green;
 }
