@@ -8,8 +8,13 @@ let linhas = " ";
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  let inputName = document.getElementById("input-name");
-  let inputNota = document.getElementById("input-nota");
+  addTable();
+  attTable();
+});
+
+function addTable() {
+  const inputName = document.getElementById("input-name");
+  const inputNota = document.getElementById("input-nota");
 
   let linha = "<tr>";
   linha += `<td>${inputName.value}</td>`;
@@ -19,9 +24,11 @@ form.addEventListener("submit", function (e) {
 
   linhas += linha;
 
-  const corpoTabela = document.querySelector("tbody");
-  corpoTabela.innerHTML = linhas;
-
   inputNota.value = "";
   inputName.value = "";
-});
+}
+
+function attTable() {
+  const corpoTabela = document.querySelector("tbody");
+  corpoTabela.innerHTML = linhas;
+}
