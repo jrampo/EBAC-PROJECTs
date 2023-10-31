@@ -6,6 +6,8 @@ const imgReprov = "<img src='./assets/pa.png' alt='teste'/>";
 const spanAprov = "<span class='resultado aprovado'>Aprovado</span>";
 const spanReprov = "<span class='resultado reprovado'>Reprovado</span>";
 
+const notaMin = parseFloat(prompt("Digite a nota minima:"));
+
 let linhas = " ";
 
 const atividades = [];
@@ -23,16 +25,20 @@ function addTable() {
   const inputName = document.getElementById("input-name");
   const inputNota = document.getElementById("input-nota");
 
-  atividades.push(inputName.value);
-  notas.push(parseFloat(inputNota.value));
+  if (atividades.includes(inputName.value)) {
+    alert(`ta moscano boy? ${inputName.value} já foi inserida`);
+  } else {
+    atividades.push(inputName.value);
+    notas.push(parseFloat(inputNota.value));
 
-  let linha = "<tr>";
-  linha += `<td>${inputName.value}</td>`;
-  linha += `<td>${inputNota.value}</td>`;
-  linha += `<td>${inputNota.value >= 7 ? imgAprov : imgReprov}</td>`;
-  linha += `</tr>`;
+    let linha = "<tr>";
+    linha += `<td>${inputName.value}</td>`;
+    linha += `<td>${inputNota.value}</td>`;
+    linha += `<td>${inputNota.value >= notaMin ? imgAprov : imgReprov}</td>`;
+    linha += `</tr>`;
 
-  linhas += linha;
+    linhas += linha;
+  }
 
   inputNota.value = "";
   inputName.value = "";
@@ -46,9 +52,9 @@ function attTable() {
 function attMediaFinal() {
   const mediaFinal = calcMedia();
 
-  document.getElementById("notaMedia").innerHTML = mediaFinal;
+  document.getElementById("notaMedia").innerHTML = mediaFinal.toFixed(1);
   document.getElementById("feedback-result").innerHTML =
-    mediaFinal >= 7 ? spanAprov : spanReprov;
+    mediaFinal >= notaMin ? spanAprov : spanReprov;
 }
 
 // FAZ UM LOOP FOR PARA ITERAR NA MÉDIA //
