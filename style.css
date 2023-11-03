@@ -49,3 +49,40 @@ form button {
 input {
   padding: 5px;
 }
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  max-width: 25%;
+  position: relative;
+  list-style: none;
+  max-height: 250px;
+  overflow-y: hidden;
+}
+
+li img {
+  width: 100%;
+}
+
+.overlay-image-link {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+ul li:hover .overlay-image-link {
+  opacity: 1;
+}
+
+.overlay-image-link a {
+  text-decoration: none;
+  color: white;
+}

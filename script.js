@@ -7,13 +7,22 @@ $(document).ready(function () {
     $("form").slideUp();
   });
 
-  const form = document.getElementById("input-url");
+  $("form").on("submit", function (e) {
+    e.preventDefault();
 
-  $("#enviar").click(function () {
-    alert(`o URL inserido foi - ${form.value}`);
-  });
+    const novaImg = $("#input-url").val();
+    const novoItem = $("<li></li>");
 
-  $("form").on("submit", function (event) {
-    event.preventDefault();
+    $(`<img src="${novaImg}" />`).appendTo(novoItem);
+    $(`
+    <div class="overlay-image-link">
+      <a href="${novaImg}" target="_blank" title="Imagem em tamanho real">
+        Ver imagem em tamanho real
+      </a>
+    </div>
+    `).appendTo(novoItem);
+    $(novoItem).appendTo("ul");
+
+    $("input").val("");
   });
 });
