@@ -21,6 +21,7 @@ header button {
   color: white;
   font-weight: 600;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 h2 {
@@ -40,6 +41,7 @@ form button {
   border: none;
   color: white;
   font-weight: 600;
+  cursor: pointer;
 }
 
 #cancelar {
