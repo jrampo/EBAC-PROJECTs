@@ -21,6 +21,12 @@ form.addEventListener("submit", function (e) {
   attMediaFinal();
 });
 
+form.addEventListener("reset", function (e) {
+  e.preventDefault();
+
+  randomiza();
+});
+
 function addTable() {
   const inputName = document.getElementById("input-name");
   const inputNota = document.getElementById("input-nota");
@@ -66,4 +72,15 @@ function calcMedia() {
   }
 
   return somaDasNotas / notas.length;
+}
+
+function randomiza() {
+  const aleatorio = Math.floor(Math.random() * atividades.length);
+  const itemSorteado = atividades[aleatorio];
+
+  if (atividades.length <= 0) {
+    alert("poe item na lista tiozao");
+  } else {
+    alert(`O item sorteado foi: ${itemSorteado}`);
+  }
 }

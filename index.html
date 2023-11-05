@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calcula média</title>
+    <title>DrawDinner</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,8 +19,8 @@
   <body>
     <div class="container">
       <header>
-        <img src="./assets/chapeu.png" />
-        <h1>Calcula média</h1>
+        <img src="./assets/logo.png" />
+        <h1>Draw Dinner</h1>
       </header>
 
       <form id="form-atividade">
@@ -27,25 +28,26 @@
           id="input-name"
           type="text"
           required
-          placeholder="Nome da atividade"
+          placeholder="Nome do prato"
         />
         <input
           id="input-nota"
           type="number"
           required
-          placeholder="Nota da atividade"
+          placeholder="Nota da receita"
           min="0"
           max="10"
         />
         <button type="submit">Adicionar +</button>
+        <button id="random-button" type="reset">Random</button>
       </form>
 
       <table cellspacing="0">
         <thead>
           <tr>
-            <th>Nome da atividade</th>
-            <th>Nota da atividade</th>
-            <th>Aprovado?</th>
+            <th>Nome do prato</th>
+            <th>Nota da receita</th>
+            <th>Bão?</th>
           </tr>
         </thead>
 
