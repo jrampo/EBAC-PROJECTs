@@ -88,3 +88,9 @@ ul li:hover .overlay-image-link {
   text-decoration: none;
   color: white;
 }
+
+.fade-in {
+  display: block;
+  opacity: 1;
+  transition: all ease 0.5s;
+}

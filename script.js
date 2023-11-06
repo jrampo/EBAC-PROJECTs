@@ -11,7 +11,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     const novaImg = $("#input-url").val();
-    const novoItem = $("<li></li>");
+    const novoItem = $('<li style="display: none"></li>');
 
     $(`<img src="${novaImg}" />`).appendTo(novoItem);
     $(`
@@ -22,6 +22,7 @@ $(document).ready(function () {
     </div>
     `).appendTo(novoItem);
     $(novoItem).appendTo("ul");
+    $(novoItem).fadeIn();
 
     $("input").val("");
   });
