@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+div {
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+}
+
+h1,
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+li.completed {
+  text-decoration: line-through;
+}
