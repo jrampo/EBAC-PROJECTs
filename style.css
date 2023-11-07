@@ -6,13 +6,20 @@
 }
 
 header {
-  background-color: rgb(92, 78, 139);
-  padding: 16px 0;
+  background-color: rgb(110, 127, 138);
+  padding-top: 16px;
   color: white;
 }
 
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
 nav {
-  background-color: rgb(125, 109, 177);
+  background-color: rgb(138, 150, 158);
   padding: 16px 0;
 }
 
@@ -29,4 +36,21 @@ nav li {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  width: 32px;
+}
+
+.menu span {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  display: block;
+  margin-bottom: 4px;
 }
