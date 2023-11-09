@@ -5,6 +5,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 header {
   background-color: rgb(110, 127, 138);
   padding-top: 16px;
@@ -12,7 +16,6 @@ header {
 }
 
 header > .container {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 16px;
@@ -21,12 +24,17 @@ header > .container {
 nav {
   background-color: rgb(138, 150, 158);
   padding: 16px 0;
+  display: none;
 }
 
 .container {
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
 }
 
 nav li {
@@ -45,6 +53,7 @@ li a {
 
 .menu {
   width: 32px;
+  cursor: pointer;
 }
 
 .menu span {
@@ -53,4 +62,66 @@ li a {
   background-color: white;
   display: block;
   margin-bottom: 4px;
+}
+
+#sobre img {
+  max-width: 400px;
+  margin-right: 24px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+section h2 {
+  margin-bottom: 16px;
+}
+
+.lista {
+  flex-wrap: wrap;
+}
+
+.lista li {
+  list-style: none;
+  max-width: 30%;
+  margin-bottom: 24px;
+}
+
+.lista li img {
+  max-width: 100%;
+}
+
+.lista li h3 {
+  margin: 16px;
+}
+
+.item-mid {
+  margin: 0 5%;
+}
+
+.lista li button {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.price {
+  margin: 16px 0;
+}
+
+li strong {
+  display: block;
+  margin: 16px 0;
+}
+
+.price del {
+  color: #ccc;
+  font-size: 14px;
 }

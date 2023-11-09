@@ -19,7 +19,7 @@
 
   <body>
     <header>
-      <div class="container">
+      <div class="container container-flex">
         <h1>EBAC Shop</h1>
         <div class="menu">
           <span></span>
@@ -54,6 +54,136 @@
       <img src="./assets/images/slide3.png" alt="FordGT" />
     </div>
 
+    <section id="sobre">
+      <div class="container container-flex">
+        <img src="./assets/images/loja.jpg" alt="loja" />
+        <div>
+          <h2>EBAC Shop</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            eligendi non fuga illo est illum corporis minima neque, laudantium,
+            dolore distinctio dolorem. Sit voluptas voluptate doloribus,
+            possimus ipsa corporis unde?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            eligendi non fuga illo est illum corporis minima neque, laudantium,
+            dolore distinctio dolorem. Sit voluptas voluptate doloribus,
+            possimus ipsa corporis unde?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Em Destaque</h2>
+        <ul class="container-flex lista">
+          <li>
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <strong>R$ 75.000,00</strong>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li class="item-mid">
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <strong>R$ 75.000,00</strong>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li>
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <strong>R$ 75.000,00</strong>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li>
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <strong>R$ 75.000,00</strong>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li class="item-mid">
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <strong>R$ 75.000,00</strong>
+            <button type="button">Tenho interesse</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Promoções</h2>
+        <ul class="container-flex lista">
+          <li>
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <div class="price">
+              <del>R$ 100.000,00</del>
+              <strong>R$ 75.000,00</strong>
+            </div>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li class="item-mid">
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <div class="price">
+              <del>R$ 100.000,00</del>
+              <strong>R$ 75.000,00</strong>
+            </div>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li>
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <div class="price">
+              <del>R$ 100.000,00</del>
+              <strong>R$ 75.000,00</strong>
+            </div>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li>
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <div class="price">
+              <del>R$ 100.000,00</del>
+              <strong>R$ 75.000,00</strong>
+            </div>
+            <button type="button">Tenho interesse</button>
+          </li>
+
+          <li class="item-mid">
+            <img src="./assets/images/carro-bmw.png" alt="carro BMW" />
+            <h3>Carro BMW</h3>
+            <p>câmbio automatico, 4 portas e travas elétricas</p>
+            <div class="price">
+              <del>R$ 100.000,00</del>
+              <strong>R$ 75.000,00</strong>
+            </div>
+            <button type="button">Tenho interesse</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!--SCRIPTs DO SLICK-->
     <script
       type="text/javascript"
@@ -74,6 +204,10 @@
     <script>
       $(document).ready(function () {
         $("#carousel").slick({ autoplay: true });
+      });
+
+      $(".menu").click(function () {
+        $("nav").slideToggle();
       });
     </script>
   </body>
