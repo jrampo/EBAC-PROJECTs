@@ -190,27 +190,31 @@
         <form>
           <div class="form-campo">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" />
+            <input type="text" id="nome" name="nome" />
           </div>
 
           <div class="form-campo">
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" />
+            <input type="tel" id="telefone" name="telefone" />
           </div>
 
           <div class="form-campo">
             <label for="email">Email:</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" name="email" />
           </div>
 
           <div class="form-campo">
             <label for="veiculo-interesse">Veículo de interesse:</label>
-            <input type="text" id="veiculo-interesse" />
+            <input
+              type="text"
+              id="veiculo-interesse"
+              name="veiculo_interesse"
+            />
           </div>
 
           <div class="form-campo">
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem"></textarea>
+            <textarea id="mensagem" name="mensagem"></textarea>
           </div>
 
           <button type="submit">Enviar</button>
@@ -257,7 +261,11 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
 
-    <!--SCRIPT Q DA PLAY NO CAROUSEL-->
+    <!--JQUERY MASK SCRIPT-->
+    <script src="./JS/jquery.mask.min.js"></script>
+    <script src="./JS/jquery.validate.min.js"></script>
+    <script src="./JS/messages_pt_BR.min.js"></script>
+
     <script>
       $(document).ready(function () {
         $("#carousel").slick({ autoplay: true });
@@ -265,6 +273,42 @@
 
       $(".menu").click(function () {
         $("nav").slideToggle();
+      });
+
+      $("#telefone").mask("(00) 00000-0000");
+
+      $("form").validate({
+        rules: {
+          nome: {
+            required: true,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          telefone: {
+            required: true,
+          },
+          mensagem: {
+            required: true,
+          },
+          veiculo_interesse: {
+            required: true,
+          },
+        },
+        messages: {
+          nome: "Põe o nome ai doidão",
+        },
+
+        submitHandler: function (form) {
+          console.log(form);
+        },
+        invalidHandler: function (event, validador) {
+          let campoIncorreto = validador.numberOfInvalids();
+          if (campoIncorreto) {
+            alert(`Existem ${campoIncorreto} campos incorretos`);
+          }
+        },
       });
     </script>
   </body>
