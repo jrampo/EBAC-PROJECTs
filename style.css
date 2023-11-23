@@ -1,0 +1,14 @@
+.bar {
+  background-color: black;
+  height: 3px;
+  width: 100%;
+  margin: 40px 0 40px 0;
+}
+
+body {
+  padding: 15px;
+}
+
+p {
+  width: 300px;
+}
