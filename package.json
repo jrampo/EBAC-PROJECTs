@@ -1,0 +1,15 @@
+{
+  "name": "ebac-projects",
+  "version": "1.0.0",
+  "description": "branches for open-study",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass source/main.scss build/main.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "quejao",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
