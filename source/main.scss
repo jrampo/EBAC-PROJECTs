@@ -1,7 +1,3 @@
-body {
-  background-color: blue;
-}
-
-p {
-  color: white;
-}
+@use "config/reset.scss";
+@use "sections/header.scss";
+@use "sections/products.scss";
