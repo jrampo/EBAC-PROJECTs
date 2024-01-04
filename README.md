@@ -1,3 +1,3 @@
 # EBAC-PROJECTs
 
-Less exercises
+Less exercises with maps - variables - escapings - compress
