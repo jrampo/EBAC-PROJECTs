@@ -1,3 +1,3 @@
 # EBAC-PROJECTs
 
-grunt automations
+grunt automations - LESS + SASS + HTML compress - watch plugin - Uglify JS Compress
