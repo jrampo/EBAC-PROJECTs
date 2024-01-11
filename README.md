@@ -1,3 +1,3 @@
 # EBAC-PROJECTs
 
-BEM + SMACSS methodology
+BEM + SMACSS methodology - EBAC
