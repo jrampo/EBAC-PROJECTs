@@ -1,3 +1,3 @@
 # EBAC-PROJECTs
 
-branches for open-study
+AJAX study project - using github API
