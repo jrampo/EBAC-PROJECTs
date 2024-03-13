@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const username = "jrampo";
   const apiUrl = `https://api.github.com/users/${username}`;
 
-<<<<<<< HEAD
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -31,27 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => {
             console.log('Erro:', error);
         });
-=======
-  fetch(apiUrl)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Erro ao recuperar os dados do GitHub.");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      profilePic.src = data.avatar_url;
-      profileName.textContent = data.name;
-      profileUsername.textContent = `@${data.login}`;
-      profileBio.textContent = data.bio;
-      profileRepos.textContent = data.public_repos;
-      profileFollowers.textContent = data.followers;
-      profileFollowing.textContent = data.following;
->>>>>>> c215489b472bcc39525ea7a9979c2b47dd60f5dc
 
       console.log(data);
     })
     .catch((error) => {
       console.log("Erro:", error);
     });
-});
+
