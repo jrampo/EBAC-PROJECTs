@@ -15,15 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 throw new Error('Erro ao recuperar os dados do GitHub.');
             }
             return response.json();
+
         })
         .then(data => {
             profilePic.src = data.avatar_url;
-            profileName.textContent = data.bio;
+            profileName.textContent = data.name;
             profileUsername.textContent = `@${data.login}`;
             profileRepos.textContent = data.public_repos;
             profileFollowers.textContent = data.followers;
             profileFollowing.textContent = data.following;
-  
+
         })
         .catch(error => {
             console.log('Erro:', error);
