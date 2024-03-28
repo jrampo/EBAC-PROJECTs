@@ -14,5 +14,5 @@ function filtraNota6(arrayAlunos) {
 
 const filtradosNota = filtraNota6(alunos)
 
-console.log(`Os alunos: ${filtradosNota} foram aprovados!`)
+console.log(`Os alunos - ${filtradosNota} - foram aprovados!`)
 
